@@ -2,7 +2,7 @@
     {
         "id" : "Claws",
         "count" : 0,
-        "item" : [
+        "items" : [
             {
                 "id" : "Fractal",
                 "rarity" : 5,
@@ -23,7 +23,7 @@
     {
         "id" : "Family",
         "count" : 0,
-        "item" : [
+        "items" : [
             {
                 "id" : "Vitra",
                 "rarity" : 5,
@@ -44,7 +44,7 @@
     {
         "id" : "Tail",
         "count" : 0,
-        "item" : [
+        "items" : [
             {
                 "id" : "Wurm",
                 "rarity" : 5,
