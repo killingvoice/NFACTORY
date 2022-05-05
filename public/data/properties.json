@@ -1,0 +1,65 @@
+[
+    {
+        "id" : "Claws",
+        "count" : 0,
+        "item" : [
+            {
+                "id" : "Fractal",
+                "rarity" : 5,
+                "image" : "\\image\\id"
+            },
+            {
+                "id" : "Appendix",
+                "rarity" : 5,
+                "image" : "\\image\\id"
+            },
+            {
+                "id" : "Spinegrowth",
+                "rarity" : 5,
+                "image" : "\\image\\id"
+            }
+        ]
+    },
+    {
+        "id" : "Family",
+        "count" : 0,
+        "item" : [
+            {
+                "id" : "Vitra",
+                "rarity" : 5,
+                "image" : "\\image\\id"
+            },
+            {
+                "id" : "Seris",
+                "rarity" : 5,
+                "image" : "\\image\\id"
+            },
+            {
+                "id" : "Grondal",
+                "rarity" : 5,
+                "image" : "\\image\\id"
+            }
+        ]
+    },
+    {
+        "id" : "Tail",
+        "count" : 0,
+        "item" : [
+            {
+                "id" : "Wurm",
+                "rarity" : 5,
+                "image" : "\\image\\id"
+            },
+            {
+                "id" : "Shiftplume",
+                "rarity" : 5,
+                "image" : "\\image\\id"
+            },
+            {
+                "id" : "Griffin",
+                "rarity" : 5,
+                "image" : "\\image\\id"
+            }
+        ]
+    }
+]
