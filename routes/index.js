@@ -3,27 +3,28 @@ var router = express.Router();
 var dataService = require('../service/data-service');
 
 /* Index Page */
-router.get('/', function(req, res, next) {
-  res.render('100', { title: 'Express' });
+router.get('/', function(req, res) {
+  var data = dataService.getData();
+  res.render('100', { data: data });
 });
 
 /* Property add */
-router.get('/property', function(req, res, next) {
+router.get('/property', function(req, res) {
   res.render('110');
 });
 
 /* item add */
-router.get('/item', function(req, res, next) {
+router.get('/item', function(req, res) {
   res.render('120');
 });
 
 /* Make random images */
-router.get('/makeimages', function(req, res, next) {
+router.get('/makeimages', function(req, res) {
   res.render('130');
 });
 
 /* View NFT images */
-router.get('/view', function(req, res, next) {
+router.get('/view', function(req, res) {
   res.render('140');
 });
 

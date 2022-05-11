@@ -1,8 +1,31 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+:root {
+  --main-white : #f9f9f9;
+  --main-green : #6bbf98;
+  --main-yellow: #f2e9bb;
+  --main-orange: #f2b84b;
+  --main-coral : #f26a4b;
+  --main-red   : #f2594b;
 }
 
-a {
-  color: #00B7FF;
+html, body {
+  border : 0px;
+  margin : 0px;
+  padding : 0px;
+  background-color: var(--main-white);
+  width: 100vw;
+  height: 100vh;
 }
+body { display: flex; flex: 1; }
+
+.flex  { display: flex; }
+.flex1 { display: flex; flex: 1}
+.flex2 { display: flex; flex: 2}
+.flex3 { display: flex; flex: 3}
+.flex4 { display: flex; flex: 4}
+.flex5 { display: flex; flex: 5}
+.flex6 { display: flex; flex: 6}
+.flex7 { display: flex; flex: 7}
+.flex8 { display: flex; flex: 8}
+.flex-column { flex-direction: column; }
+.flex-row    { flex-direction: row; }
+.flex-center { justify-content: center; align-items: center; }

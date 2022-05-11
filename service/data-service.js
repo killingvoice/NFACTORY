@@ -2,16 +2,15 @@ var fs = require('fs');
 var m = {}
 const propertyJsonLocation = "./public/data/properties.json";
 
-m.dataRes = () => {
+m.getData = () => {
     var data = JSON.parse(fs.readFileSync(propertyJsonLocation));
-    console.log(data);
+    return data;
 };
 
 m.addProperty = (id) => {
     var data = JSON.parse(fs.readFileSync(propertyJsonLocation));
     const tmpData = {
         "id" : id,
-        "count" : 0,
         "items" : []
     }
     data.push(tmpData);

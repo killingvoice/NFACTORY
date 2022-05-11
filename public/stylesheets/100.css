@@ -1,0 +1,29 @@
+.main-container {
+    width: 50vw;
+    height: 70vh;
+    border-radius: 30px;
+    border: 1px solid #e8e8e8;
+}
+.menu-container {
+    height: 80px;
+    align-items: stretch;
+    justify-content: stretch;
+    border-bottom: 1px solid #e8e8e8;
+}
+.list-conatiner {
+    background-color: #ffffff;
+}
+.menu {
+    padding: 10px;
+    border-right: 1px solid #e8e8e8;
+}
+.menu:first-child {
+    border-top-left-radius: 30px;
+}
+.menu:last-child {
+    border-top-right-radius: 30px;
+    border: 0
+}
+.menu:hover {
+    background-color: var(--main-coral);
+}
