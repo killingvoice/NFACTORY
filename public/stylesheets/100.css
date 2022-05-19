@@ -1,29 +1,61 @@
 .main-container {
-    width: 50vw;
-    height: 70vh;
-    border-radius: 30px;
-    border: 1px solid #e8e8e8;
+    width: 100%;
+    height: 100%;
 }
+
 .menu-container {
-    height: 80px;
     align-items: stretch;
     justify-content: stretch;
-    border-bottom: 1px solid #e8e8e8;
-}
-.list-conatiner {
+    box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
     background-color: #ffffff;
+    z-index: 10;
 }
+
 .menu {
-    padding: 10px;
-    border-right: 1px solid #e8e8e8;
+    height: 70px;
 }
-.menu:first-child {
-    border-top-left-radius: 30px;
+
+.property-list {
+    width: 320px;
+    height: 100vh;
+    overflow-y: scroll;
+    border-right: 1px solid rgb(229, 232, 235);
+    background-color: rgb(240, 240, 240);
 }
-.menu:last-child {
-    border-top-right-radius: 30px;
-    border: 0
+
+.property-list > div {
+    width: 100%;
 }
-.menu:hover {
-    background-color: var(--main-coral);
+
+.property-list > div > button {
+    width: 100%;
+    height: 70px;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid rgb(229, 232, 235);
+    border-right: 0px;
+}
+.property-list > div > div {
+    width: 290px;
+    background-color: rgb(240, 240, 240);
+    border: 0px;
+    padding: 15px;
+}
+
+.property-list > div > div > button {
+    width: 100%;
+    height: 30px;
+    font-size: 15px;
+    text-align: start;
+    color: rgb(53, 56, 64);
+    border: 0px;
+    background-color: rgb(240, 240, 240);
+    font-weight: 400;
+    margin: 0px;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }

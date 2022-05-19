@@ -1,10 +1,17 @@
 :root {
-  --main-white : #f9f9f9;
+  --main-white : #fafafa;
   --main-green : #6bbf98;
   --main-yellow: #f2e9bb;
   --main-orange: #f2b84b;
   --main-coral : #f26a4b;
   --main-red   : #f2594b;
+}
+
+* {
+  font-family: sans-serif;
+  line-height: 1.5;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 html, body {
@@ -14,7 +21,9 @@ html, body {
   background-color: var(--main-white);
   width: 100vw;
   height: 100vh;
+  min-width: 770px;
 }
+
 body { display: flex; flex: 1; }
 
 .flex  { display: flex; }
