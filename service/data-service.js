@@ -1,4 +1,5 @@
 var fs = require('fs');
+var fsExtra = require('fs-extra');
 var m = {}
 const propertyJsonLocation = "./public/data/properties.json";
 const nftJsonLocation = "./public/data/nft.json";
@@ -6,6 +7,10 @@ const nftJsonLocation = "./public/data/nft.json";
 
 m.getData = () => {
     var data = JSON.parse(fs.readFileSync(propertyJsonLocation));
+    return data;
+};
+m.getNft = () => {
+    var data = JSON.parse(fs.readFileSync(nftJsonLocation));
     return data;
 };
 
@@ -60,11 +65,19 @@ m.makeImage = () => {
         var tmp = {};
 
         for(var j=0; j<property.length; j++) {
-            tmp[property[j].id] = property[j].items[rarityArray[j][Math.floor(Math.random() * rarityArray[j].length)]].id;
+            //tmp[property[j].id] = property[j].items[rarityArray[j][Math.floor(Math.random() * rarityArray[j].length)]].id;
+            tmp[property[j].id] = rarityArray[j][Math.floor(Math.random() * rarityArray[j].length)];
         }
         nfts[i] = tmp;
     }
 
     fs.writeFile(nftJsonLocation, JSON.stringify(nfts), 'utf8', function(error){ console.log('write end') });
 }
+
+m.init = () => {
+    fsExtra.emptyDirSync("./public/image/");
+    fs.writeFile(nftJsonLocation, "[]", 'utf8', function(error){ console.log('write end') });
+    fs.writeFile(propertyJsonLocation, "[]", 'utf8', function(error){ });
+}
+
 module.exports = m;

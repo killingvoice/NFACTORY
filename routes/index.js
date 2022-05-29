@@ -5,7 +5,8 @@ var dataService = require('../service/data-service');
 /* Index Page */
 router.get('/', function(req, res) {
   var data = dataService.getData();
-  res.render('100', { data: data });
+  var nft = dataService.getNft();
+  res.render('100', { data: data, nft: nft });
 });
 
 /* Property add */
@@ -26,8 +27,9 @@ router.get('/makeimages', function(req, res) {
 });
 
 /* View NFT images */
-router.get('/view', function(req, res) {
-  res.render('140');
+router.get('/init', function(req, res) {
+  dataService.init();
+  res.redirect('/');
 });
 
 router.get('/test', function(reqq, res) {
