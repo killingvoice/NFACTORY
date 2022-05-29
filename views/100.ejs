@@ -31,15 +31,15 @@
         </div>
         <div class="flex1 flex-wrap overflow-scroll flex-around">
           <% if(nft.length <= 0) { %>
-            안녕하세요.
-          <% } %>
+            이미지 생성 버튼을 눌러주세요.
+          <% } else { %>
           <% for(var i=0; i<100; i++) { %>
             <div class="card">
               <% for(var j=0; j<data.length; j++) { %>
                 <div class="image" style="background-image:url('./image/<%=data[j].items[nft[i][data[j].id]].image%>')"></div>
               <% } %>
             </div>
-          <% } %>
+          <% } } %>
         </div>
       </div>
     </div>
