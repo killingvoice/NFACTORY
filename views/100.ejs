@@ -7,52 +7,39 @@
   <body class="flex-center">
     <div class="main-container flex flex-column">
       <div class="menu-container flex">
-        <div class="menu flex1 flex-center">속성 추가</div>
-        <div class="menu flex1 flex-center">아이템 추가</div>
-        <div class="menu flex1 flex-center">이미지 생성</div>
-        <div class="menu flex1 flex-center">이미지 확인</div>
-        <div class="menu flex1 flex-center">테스트 조합</div>
-        <div class="menu flex1 flex-center">초기화</div>
+        <div class="menu flex1 flex-center"><a href="/property">속성 추가</a></div>
+        <div class="menu flex1 flex-center"><a href="/item">아이템 추가</a></div>
+        <div class="menu flex1 flex-center"><a href="/makeimages">이미지 생성</a></div>
+        <div class="menu flex1 flex-center"><a href="/property">이미지 확인</a></div>
+        <div class="menu flex1 flex-center"><a href="/property">테스트 조합</a></div>
+        <div class="menu flex1 flex-center"><a href="/property">초기화</a></div>
       </div>
       <div class="list-container flex1">
         <div class="flex property-list flex-column">
-          <div>
-            <button>속성1</button>
+          <% for(var i=0; i<data.length; i++) { %>
             <div>
-              <button>아이템1</button>
-              <button>아이템1</button>
-              <button>아이템1</button>
+              <button><%=data[i].id%></button>
+              <div>
+                <% for(var j=0; j<data[i].items.length; j++) { %>
+                  <button><%=data[i].items[j].id%></button>
+                <% } %>
+              </div>
             </div>
-          </div>
-
-          
-          <div>
-            <button>속성1</button>
-            <div>
-              <button>아이템1</button>
-              <button>아이템1</button>
-              <button>아이템1</button>
-            </div>
-          </div>
-
-          
-          <div>
-            <button>속성1</button>
-            <div>
-              <button>아이템1</button>
-              <button>아이템1</button>
-              <button>아이템1</button>
-            </div>
-          </div>
-          
+          <% } %>
         </div>
-        <div class="flex1 flex-column">
-          <div class="flex1">
-            예시 이미지
-          </div>
-          <div class="flex1">
-            예시 이미지 속성
-          </div>
+        <div class="flex1 flex-wrap overflow-scroll flex-around">
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
         </div>
       </div>
     </div>

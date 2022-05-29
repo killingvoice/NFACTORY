@@ -15,12 +15,14 @@ router.get('/property', function(req, res) {
 
 /* item add */
 router.get('/item', function(req, res) {
-  res.render('120');
+  var data = dataService.getData();
+  res.render('120', { data: data });
 });
 
 /* Make random images */
 router.get('/makeimages', function(req, res) {
-  res.render('130');
+  var data = dataService.makeImage();
+  res.redirect('/');
 });
 
 /* View NFT images */

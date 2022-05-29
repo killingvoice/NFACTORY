@@ -3,6 +3,9 @@
     height: 100%;
 }
 
+.list-container {
+    height: calc(100% - 70px);
+}
 .menu-container {
     align-items: stretch;
     justify-content: stretch;
@@ -17,7 +20,6 @@
 
 .property-list {
     width: 320px;
-    height: 100vh;
     overflow-y: scroll;
     border-right: 1px solid rgb(229, 232, 235);
     background-color: rgb(240, 240, 240);
@@ -58,4 +60,13 @@
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(229, 232, 235);
+    border-radius: 10px;
 }
