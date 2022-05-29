@@ -10,9 +10,11 @@
         <div class="menu flex1 flex-center"><a href="/property">속성 추가</a></div>
         <div class="menu flex1 flex-center"><a href="/item">아이템 추가</a></div>
         <div class="menu flex1 flex-center"><a href="/makeimages">이미지 생성</a></div>
+        <!--
         <div class="menu flex1 flex-center"><a href="/property">이미지 확인</a></div>
-        <div class="menu flex1 flex-center"><a href="/property">테스트 조합</a></div>
-        <div class="menu flex1 flex-center"><a href="/property">초기화</a></div>
+        <divclass="menu flex1 flex-center"><a href="/property">테스트 조합</a></div>
+        -->
+        <div class="menu flex1 flex-center"><a href="/init">초기화</a></div>
       </div>
       <div class="list-container flex1">
         <div class="flex property-list flex-column">
@@ -28,18 +30,16 @@
           <% } %>
         </div>
         <div class="flex1 flex-wrap overflow-scroll flex-around">
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
+          <% if(nft.length <= 0) { %>
+            안녕하세요.
+          <% } %>
+          <% for(var i=0; i<100; i++) { %>
+            <div class="card">
+              <% for(var j=0; j<data.length; j++) { %>
+                <div class="image" style="background-image:url('./image/<%=data[j].items[nft[i][data[j].id]].image%>')"></div>
+              <% } %>
+            </div>
+          <% } %>
         </div>
       </div>
     </div>
